@@ -34,11 +34,13 @@ clean
 
 2. Start the game
 3. Get user input and check if present in the puzzle.
-4. If present then highlight
+4. If present then highlight.
+
 ![image](https://user-images.githubusercontent.com/68386459/115558282-328e0e80-a2d0-11eb-871d-ef2079ddac03.png)
 
 5. If all words not found till time runs out, game over.
 6. Show all words hidden in puzzle and its orientation. + Trie data structure used in this feature
+
 ![image](https://user-images.githubusercontent.com/68386459/115558309-3c177680-a2d0-11eb-8c87-04144788d6a7.png)
 
 
