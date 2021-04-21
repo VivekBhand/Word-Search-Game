@@ -38,7 +38,7 @@ int main(){
 		printf("\t\t\t\t1:Animals\n");
 		printf("\t\t\t\t2:Citys\n");
 		printf("\t\t\t\t3:The Colours\n");
-		printf("\t\t\t\t4:Enter new text file\n");
+//		printf("\t\t\t\t4:Enter new text file\n");
 		printf("\t\t\t\t0 To Quit\n\n");
 		printf("\t\t\t\tChoice:> ");
 		scanf("%d", &choice);
@@ -50,7 +50,7 @@ int main(){
             fp=fopen("animals.txt","r");
             if(!fp)
             printf("couldn't open\n");
-            no_of_words = count_lines("animals.txt");
+            no_of_words = count_lines("textFile/animals.txt");
             char animal[no_of_words][LSIZ];			//max word length 10
             for (int i = 0; i < no_of_words; i++) {
                 fgets(animal[i],12,fp);
@@ -60,7 +60,7 @@ int main(){
 			Sleep(1);
 
 
-			gameFunction("animals.txt");
+			gameFunction("textFile/animals.txt");
 			fclose(fp);
 		}
 		if(choice == 2){
@@ -69,7 +69,7 @@ int main(){
             fp=fopen("citys.txt","r");
             if(!fp)
             printf("couldn't open\n");
-            no_of_words = count_lines("citys.txt");
+            no_of_words = count_lines("textFile/citys.txt");
             char city[no_of_words][10];			//max word length 10
 
             for (int i = 0; i < no_of_words; i++) {
@@ -78,7 +78,7 @@ int main(){
 			pointer = citys;
 			printf("\nFind 8 City of the India!\n\n");
 			Sleep(4);
-			gameFunction("citys.txt");
+			gameFunction("textFile/citys.txt");
 			fclose(fp);
 		}
 		if(choice == 3){
@@ -87,7 +87,7 @@ int main(){
             fp=fopen("colours.txt","r");
             if(!fp)
             printf("couldn't open\n");
-            no_of_words = count_lines("colours.txt");
+            no_of_words = count_lines("textFile/colours.txt");
             char colour[no_of_words][LSIZ];			//max word length 10
 
             for (int i = 0; i < no_of_words; i++) {
@@ -96,25 +96,25 @@ int main(){
 			pointer = colours;
 			printf("\nFind 8 colours!");
             Sleep(2);
-			gameFunction("colours.txt");
+			gameFunction("textFile/colours.txt");
 			fclose(fp);
 		}
-		if(choice == 4){
-            printf("Enter file name:");
-            char input[20];
-            scanf("%s",input);
-            fp=fopen(input,"r");
-            if(!fp) {
-                printf("couldn't open\n");
-            }
-            else {
-                no_of_words = count_lines(input);
-                char* word[no_of_words][LSIZ];			//max word length 10
-                char* str =malloc(15);
-                for (int i = 0; i < no_of_words; i++) {
-                    fscanf(fp,"%s",str);
-                    strcpy(word[i],str);
-                }
+//		if(choice == 4){
+//            printf("Enter file name:");
+//            char input[20];
+//           scanf("%s",input);
+//            fp=fopen(input,"r");
+//            if(!fp) {
+//                printf("couldn't open\n");
+//            }
+//            else {
+//                no_of_words = count_lines(input);
+//                char* word[no_of_words][LSIZ];			//max word length 10
+//                char* str =malloc(15);
+//                for (int i = 0; i < no_of_words; i++) {
+//                    fscanf(fp,"%s",str);
+//                    strcpy(word[i],str);
+//                }
 //                char** words;
 //                words = (char **)malloc(no_of_words * sizeof(char*));
 //                for (int i = 0; i < no_of_words; i++)
@@ -124,16 +124,16 @@ int main(){
 //                for (int i = 0; i < no_of_words; i++){
 //                    printf("%s ",word[i]);
 //                }
-
-                pointer = word;
-                printf("\nFind words!\n");
-                Sleep(2);
-                printf("NOT WORKING NOW\n");
+//
+//                pointer = word;
+//                printf("\nFind words!\n");
+//                Sleep(2);
+//                printf("NOT WORKING NOW\n");
                 //gameFunction(input);
-            }
-            getchar();
-            fclose(fp);
-		}
+//            }
+//            getchar();
+//            fclose(fp);
+//		}
 		if(choice == 0){
 
 			gameOver = TRUE;
