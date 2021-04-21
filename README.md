@@ -1,7 +1,9 @@
 # Word-Search-Game
 
 DSA Mini project
+
 Semester - 4
+
 MIS : 111903129
 
 ## How to run
