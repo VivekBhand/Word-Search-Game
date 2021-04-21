@@ -8,7 +8,7 @@ MIS : 111903129
 
 ## How to run
 ### Create a fork
-```
+```git
 git clone https://github.com/VivekBhand/Word-Search-Game.git
 
 ```
@@ -23,7 +23,7 @@ make all
 ### Remove Extra .o file
 
 ```
-clean
+make clean
 
 ```
 
