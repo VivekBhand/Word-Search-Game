@@ -7,7 +7,7 @@ MIS : 111903129
 ## How to run
 ### Create a fork
 ```
-git clone
+git clone https://github.com/VivekBhand/Word-Search-Game.git
 
 ```
 
